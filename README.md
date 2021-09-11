@@ -7,7 +7,7 @@ This is a P8X32A/Propeller, P2X8C4M64P/Propeller 2 driver object for the PCF8574
 
 ## Salient Features
 
-* I2C connection at ~30kHz (SPIN I2C engine), up to 100kHz (PASM I2C engine)
+* I2C connection at ~30kHz (P1: SPIN I2C), 100kHz (P1: PASM I2C, P2)
 * Methods to read a byte from and write a byte to the I/O expander parallel port
 
 ## Requirements
@@ -32,4 +32,4 @@ P2/SPIN2:
 
 ## TODO
 
-- [ ] TBD
+- [ ] add support for alternate I2C addresses (3 bits)
