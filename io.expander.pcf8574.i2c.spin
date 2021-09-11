@@ -5,7 +5,7 @@
     Description: Driver for the PCF8574 I2C I/O expander
     Copyright (c) 2021
     Started Sep 06, 2021
-    Updated Sep 08, 2021
+    Updated Sep 11, 2021
     See end of file for terms of use.
     --------------------------------------------
 }
@@ -56,17 +56,17 @@ PUB Stop{}
 
     i2c.deinit{}
 
-PUB Rd_Byte{}: rd_b | cmd_pkt
+PUB Rd_Byte{}: rd_b
 ' Read I/O expander P0..7 as byte rd_b
 '   Example:
 '       P7..0 state is: %1010_1010
 '       rd_b returns $AA
     i2c.start{}
     i2c.write(SLAVE_RD)
-    i2c.rd_byte(i2c#NAK)
+    rd_b := i2c.rd_byte(i2c#NAK)
     i2c.stop{}
 
-PUB Wr_byte(wr_b) | cmd_pkt
+PUB Wr_byte(wr_b)
 ' Write byte wr_b to I/O expander P0..7
 '   Example:
 '       Wr_Byte("A")
