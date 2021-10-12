@@ -5,7 +5,7 @@
     Description: Driver for the PCF8574 I2C I/O expander (P2 version)
     Copyright (c) 2021
     Started Sep 11, 2021
-    Updated Sep 11, 2021
+    Updated Oct 12, 2021
     See end of file for terms of use.
     --------------------------------------------
 }
@@ -25,10 +25,6 @@ OBJ
 
 PUB Null()
 ' This is not a top-level object
-
-PUB Start(): status
-' Start using "standard" Propeller I2C pins and 100kHz
-    return startx(DEF_SCL, DEF_SDA, DEF_HZ)
 
 PUB Startx(SCL_PIN, SDA_PIN, I2C_HZ): status
 ' Start using custom IO pins and I2C bus frequency
